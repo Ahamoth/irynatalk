@@ -98,26 +98,47 @@
         <p class="max-w-sm text-sm text-muted-foreground">Перша консультація триває 50 хвилин і проходить у Zoom або Google Meet.</p>
       </div>
 
-      <form class="space-y-5 bg-card p-8 shadow-soft md:p-10">
-        <div class="grid gap-5 md:grid-cols-2">
-          <div class="space-y-2">
-            <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="name">Ім’я</label>
-            <input class="flex w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12" id="name" required="" name="name" />
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 bg-card p-8 shadow-soft md:p-10">
+        <!-- Приховані поля Web3Forms -->
+        <input type="hidden" name="access_key" value="37bd4255-47d3-42e6-921e-0340cb44822d" />
+        <input type="hidden" name="subject" value="Нова заявка з сайту Ірини Борисовської" />
+        <input type="hidden" name="from_name" value="Сайт Ірини Борисовської" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div>
+            <input type="text" name="name" required placeholder="Ваше ім'я та прізвище*" class="flex w-full rounded-2xl border border-[#7BA2D4]/60 bg-transparent px-6 py-4 text-base outline-none transition-colors focus:border-[#7BA2D4] focus:ring-1 focus:ring-[#7BA2D4] placeholder:text-muted-foreground/70" />
           </div>
-          <div class="space-y-2">
-            <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="phone">Телефон або Telegram</label>
-            <input class="flex w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12" id="phone" required="" name="phone" />
+          <div>
+            <input type="email" name="email" required placeholder="Ваша пошта*" class="flex w-full rounded-2xl border border-[#7BA2D4]/60 bg-transparent px-6 py-4 text-base outline-none transition-colors focus:border-[#7BA2D4] focus:ring-1 focus:ring-[#7BA2D4] placeholder:text-muted-foreground/70" />
+          </div>
+          <div>
+            <input type="tel" name="phone" required pattern="^\+?[0-9\s\-\(\)]{10,20}$" title="Будь ласка, вкажіть номер з кодом країни (наприклад: +380991234567)" placeholder="Ваш номер телефону* (з кодом країни)" class="flex w-full rounded-2xl border border-[#7BA2D4]/60 bg-transparent px-6 py-4 text-base outline-none transition-colors focus:border-[#7BA2D4] focus:ring-1 focus:ring-[#7BA2D4] placeholder:text-muted-foreground/70" />
+          </div>
+          <div class="relative">
+            <select name="contact_method" id="contact-method" class="flex w-full appearance-none bg-none rounded-2xl border border-[#7BA2D4]/60 bg-transparent px-6 py-4 text-base outline-none transition-colors focus:border-[#7BA2D4] focus:ring-1 focus:ring-[#7BA2D4] text-muted-foreground" style="appearance:none; -webkit-appearance:none; -moz-appearance:none; background-image:none;">
+              <option value="Дзвінок">Зателефонуйте мені</option>
+              <option value="Viber">Напишіть мені в Viber</option>
+              <option value="Telegram">Напишіть мені в Telegram</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-muted-foreground">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
           </div>
         </div>
-        <div class="space-y-2">
-          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="email">Email</label>
-          <input type="email" class="flex w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12" id="email" required="" name="email" />
+
+        <!-- Поле для никнейма (появляется динамически) -->
+        <div id="nickname-container" class="hidden">
+          <input type="text" name="nickname" id="nickname" placeholder="@nickname*" class="flex w-full rounded-2xl border border-[#7BA2D4]/60 bg-transparent px-6 py-4 text-base outline-none transition-colors focus:border-[#7BA2D4] focus:ring-1 focus:ring-[#7BA2D4] placeholder:text-muted-foreground/70" />
         </div>
-        <div class="space-y-2">
-          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="message">З чим хочете попрацювати?</label>
-          <textarea class="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" id="message" name="message" rows="5"></textarea>
+        
+        <div>
+          <textarea name="message" rows="4" placeholder="Ваше повідомлення" class="flex w-full rounded-2xl border border-[#7BA2D4]/60 bg-transparent px-6 py-4 text-base outline-none transition-colors focus:border-[#7BA2D4] focus:ring-1 focus:ring-[#7BA2D4] placeholder:text-muted-foreground/70"></textarea>
         </div>
-        <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 rounded-none bg-primary text-primary-foreground uppercase tracking-[0.14em] text-xs font-semibold hover:bg-primary/90 h-14 px-8 w-full" type="submit">Надіслати заявку</button>
+
+        <div id="form-status" class="hidden" role="status" aria-live="polite"></div>
+        
+        <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed rounded-2xl bg-primary text-primary-foreground uppercase tracking-[0.14em] text-xs font-semibold hover:bg-primary/90 h-14 px-8 w-full mt-2" type="submit">Надіслати заявку</button>
       </form>
     </div>
 
@@ -163,6 +184,7 @@
   
   
   
+<script src="assets/js/contact-form.js"></script>
 <script src="assets/js/mobile-menu.js"></script>
 </body>
 </html>
