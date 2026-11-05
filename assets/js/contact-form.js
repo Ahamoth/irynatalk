@@ -31,7 +31,7 @@
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    // Проверка телефона на код страны (простая эвристика)
+    // Проверка телефона на код страны
     var phoneValue = form.querySelector('input[name="phone"]').value.replace(/[\s\-\(\)]/g, '');
     if (!phoneValue.startsWith('+')) {
       status.textContent = 'Будь ласка, вкажіть номер телефону з кодом країни (наприклад, +380...)';
@@ -41,20 +41,28 @@
     }
 
     btn.disabled = true;
-    btn.textContent = 'Надсилаємо';
+    btn.textContent = 'Надсилаємо...';
     status.classList.add('hidden');
     status.textContent = '';
 
     try {
       var data = new FormData(form);
       var obj = {};
-      data.forEach(function (value, key) { obj[key] = value; });
+      
+      // Собираем только нужные поля для Telegram
+      var allowedFields = ['name', 'email', 'phone', 'contact_method', 'nickname', 'message'];
+      
+      data.forEach(function (value, key) { 
+        if (allowedFields.includes(key) && value.trim() !== '') {
+          obj[key] = value; 
+        }
+      });
 
-      var res = await fetch('https://api.web3forms.com/submit', {
+      // URL вашего Cloudflare Worker
+      var res = await fetch('https://telegram-form-relay.irynaborisovskaya.workers.dev', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(obj)
       });
@@ -67,7 +75,7 @@
         form.reset();
         toggleNickname(); // Прячем поле никнейма после сброса
       } else {
-        status.textContent = 'Помилка: ' + (json.message || 'не вдалося надіслати заявку');
+        status.textContent = 'Помилка: ' + (json.error || 'не вдалося надіслати заявку');
         status.className = 'bg-red-50 border border-red-200 text-red-800 rounded-md p-4 text-sm mt-4';
       }
     } catch (err) {
