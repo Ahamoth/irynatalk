@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" data-precedence="default" />
+  <link rel="stylesheet" href="assets/styles.css" data-precedence="default" />
+  <title>Блог психолога — Ірина Борисовська</title>
+  <meta name="description" content="Статті про стосунки, емоційне здоров’я, цілі та особисті межі." />
+  <meta property="og:title" content="Блог психолога — Ірина Борисовська" />
+  <meta property="og:description" content="Статті про стосунки, емоційне здоров’я, цілі та особисті межі." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="modulepreload" href="assets/js/index.js" />
+  <link rel="modulepreload" href="assets/js/jsx-runtime.js" />
+  <link rel="modulepreload" href="assets/js/blog.index.js" />
+  <link rel="modulepreload" href="assets/js/PageHeading.js" />
+  <link rel="modulepreload" href="assets/js/PostCard.js" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="twitter:title" content="Блог психолога — Ірина Борисовська" />
+  <meta name="twitter:description" content="Статті про стосунки, емоційне здоров’я, цілі та особисті межі." />
+  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_3m0cnpbf208s7bzf4h71asb6eb/e77d67238d1e314cc47517fa4bf1c60f_1793897502858.png" />
+  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_3m0cnpbf208s7bzf4h71asb6eb/e77d67238d1e314cc47517fa4bf1c60f_1793897502858.png" />
+</head>
+<body>
+  <header class="relative z-30 border-b bg-background">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-6">
+      <a class="group flex items-center gap-3 text-foreground" href="index.html">
+        <span class="flex size-12 items-center justify-center rounded-full border border-foreground/70 font-display text-2xl italic">ІБ</span>
+        <span class="flex flex-col leading-none">
+          <span class="whitespace-nowrap font-display text-xl uppercase tracking-[0.08em] md:text-2xl">Ірина Борисовська</span>
+          <span class="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Простір психології</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-[15px] lg:flex">
+        <a class="nav-link whitespace-nowrap" href="index.html">Головна</a>
+        <a class="nav-link whitespace-nowrap" href="about.html">Про мене</a>
+        <a class="nav-link whitespace-nowrap" href="courses.html">Тести</a>
+        <a class="nav-link whitespace-nowrap text-primary font-semibold" href="blog.html" data-status="active" aria-current="page">Блог</a>
+        <a class="nav-link whitespace-nowrap" href="contacts.html">Контакти</a>
+      </nav>
+      <div class="hidden items-center gap-3 xl:flex">
+        <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-primary/40 bg-transparent text-primary uppercase tracking-[0.1em] text-[11px] font-semibold hover:bg-card rounded-md px-8 h-11 leading-tight" href="contacts.html">Записатись на консультацію</a>
+        <span class="ml-2 hidden size-10 2xl:flex items-center justify-center rounded-full border border-primary/30">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag size-4" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0" /><path d="M3.103 6.034h17.794" /><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" /></svg>
+        </span>
+        <span class="hidden size-10 items-center justify-center rounded-full border border-primary/30 2xl:flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search size-4" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg>
+        </span>
+        <span class="hidden size-10 items-center justify-center rounded-full border border-primary/30 text-sm 2xl:flex">UA</span>
+      </div>
+      <button type="button" aria-label="Меню" class="flex size-11 items-center justify-center rounded-full border border-primary/30 lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5" aria-hidden="true"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!--$-->
+    <section class="bg-secondary/60">
+      <div class="mx-auto max-w-7xl px-6 py-20">
+        <p class="text-xs uppercase tracking-[0.3em] text-muted-foreground">Блог</p>
+        <h1 class="mt-4 max-w-3xl text-5xl leading-[1.05] md:text-7xl">Тут про психологію</h1>
+        <p class="mt-6 max-w-2xl text-lg text-muted-foreground">Короткі статті, цікаві факти, огляти книг та кіно.</p>
+      </div>
+    </section>
+
+    <div class="mx-auto mt-16 grid max-w-7xl gap-12 px-6 md:grid-cols-3">
+      <article class="group flex flex-col">
+        <div class="flex items-center justify-between text-xs text-muted-foreground">
+          <span class="border-b border-primary/40 text-primary">Стосунки</span>
+          <span>прочитаєте за <b>5<!-- --> хв</b> · <!-- -->14.09.2026</span>
+        </div>
+        <a class="mt-4 block overflow-hidden" href="blog/yak-hovoryty-pro-pochuttia.html">
+          <img src="assets/img/blog-couple.jpg" alt="Як говорити про почуття, коли страшно бути неправильно зрозумілою" loading="lazy" width="1024" height="704" class="aspect-[3/2] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        </a>
+        <h3 class="mt-5 text-2xl leading-snug"><a class="hover:text-primary" href="blog/yak-hovoryty-pro-pochuttia.html">Як говорити про почуття, коли страшно бути неправильно зрозумілою</a></h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Найважчі розмови часто відкладаються саме тому, що вони важливі. Розповідаю про простий формат, який допомагає почати.</p>
+        <a class="mt-4 self-start text-xs font-semibold uppercase tracking-[0.14em] text-primary nav-link" href="blog/yak-hovoryty-pro-pochuttia.html">Детальніше</a>
+      </article>
+      <article class="group flex flex-col">
+        <div class="flex items-center justify-between text-xs text-muted-foreground">
+          <span class="border-b border-primary/40 text-primary">Здоров’я</span>
+          <span>прочитаєте за <b>6<!-- --> хв</b> · <!-- -->02.09.2026</span>
+        </div>
+        <a class="mt-4 block overflow-hidden" href="blog/vtoma-yaku-ne-znimaie-son.html">
+          <img src="assets/img/blog-rest.jpg" alt="Втома, яку не знімає сон: як розпізнати емоційне виснаження" loading="lazy" width="1024" height="704" class="aspect-[3/2] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        </a>
+        <h3 class="mt-5 text-2xl leading-snug"><a class="hover:text-primary" href="blog/vtoma-yaku-ne-znimaie-son.html">Втома, яку не знімає сон: як розпізнати емоційне виснаження</a></h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Якщо вихідних не вистачає, щоб відновитися, справа може бути не в кількості відпочинку, а в його якості.</p>
+        <a class="mt-4 self-start text-xs font-semibold uppercase tracking-[0.14em] text-primary nav-link" href="blog/vtoma-yaku-ne-znimaie-son.html">Детальніше</a>
+      </article>
+      <article class="group flex flex-col">
+        <div class="flex items-center justify-between text-xs text-muted-foreground">
+          <span class="border-b border-primary/40 text-primary">Цілі</span>
+          <span>прочитаєте за <b>4<!-- --> хв</b> · <!-- -->21.08.2026</span>
+        </div>
+        <a class="mt-4 block overflow-hidden" href="blog/tsili-bez-perfektsionizmu.html">
+          <img src="assets/img/blog-goals.jpg" alt="Фільм &quot;Батько&quot;: деменція з середени" loading="lazy" width="1024" height="704" class="aspect-[3/2] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        </a>
+        <h3 class="mt-5 text-2xl leading-snug"><a class="hover:text-primary" href="blog/tsili-bez-perfektsionizmu.html">Фільм &quot;Батько&quot;: деменція з середени</a></h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted-foreground"></p>
+        <a class="mt-4 self-start text-xs font-semibold uppercase tracking-[0.14em] text-primary nav-link" href="blog/tsili-bez-perfektsionizmu.html">Детальніше</a>
+      </article>
+    </div>
+
+    <script>(function(a,f){let l;try{l=JSON.parse(sessionStorage.getItem(a)||"{}")}catch{return}const n=l?.[f||history.state?.__TSR_key];let c=!1;for(const t in n){const e=n[t],o=e?.scrollX,s=e?.scrollY;if(Number.isFinite(o)&&Number.isFinite(s)){if(t==="window")scrollTo(o,s),c=!0;else if(t)try{const r=document.querySelector(t);r&&(r.scrollLeft=o,r.scrollTop=s)}catch{}}}if(c)return;const i=location.hash.slice(1);if(i){const t=history.state?.__hashScrollIntoViewOptions??!0;if(t){const e=document.getElementById(i);e&&e.scrollIntoView(t)}return}scrollTo(0,0)})("tsr-scroll-restoration-v1_3");document.currentScript.remove()</script>
+    <!--/$-->
+  </main>
+
+  <footer class="mt-24 border-t bg-secondary/60">
+    <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <a class="group flex items-center gap-3 text-foreground" href="index.html">
+          <span class="flex size-12 items-center justify-center rounded-full border border-foreground/70 font-display text-2xl italic">ІБ</span>
+          <span class="flex flex-col leading-none">
+            <span class="whitespace-nowrap font-display text-xl uppercase tracking-[0.08em] md:text-2xl">Ірина Борисовська</span>
+            <span class="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Простір психології</span>
+          </span>
+        </a>
+        <p class="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">Онлайн-простір психологічної підтримки: групи та індивідуальні консультації для тих, хто хоче жити спокійніше й усвідомленіше.</p>
+      </div>
+      <div>
+        <h4 class="text-xl">Навігація</h4>
+        <ul class="mt-4 space-y-2 text-sm text-muted-foreground">
+          <li><a class="hover:text-primary" href="about.html">Про мене</a></li>
+          <li><a class="hover:text-primary" href="courses.html">Тести</a></li>
+          <li><a class="hover:text-primary active" href="blog.html" data-status="active" aria-current="page">Блог</a></li>
+          <li><a class="hover:text-primary" href="contacts.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl">Зв’язок</h4>
+        <ul class="mt-4 space-y-3 text-sm text-muted-foreground">
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>irynaborisovskaya@gmail.com</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone size-4" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></svg>+38 067 565 36 23</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin size-4" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>Дніпро · онлайн</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t py-6 text-center text-xs text-muted-foreground">© <!-- -->2026<!-- --> <!-- -->Ірина Борисовська<!-- -->. Усі права захищені.</div>
+  </footer>
+
+  <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section>
+
+  <script data-tsr-stream-part="">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/assets/js/index.js","/assets/js/jsx-runtime.js"],scripts:$R[5]=[$R[6]={attrs:$R[7]={type:"module",async:!0,src:"/assets/js/index.js"}}]},"/blog/":$R[8]={preloads:$R[9]=["/assets/js/blog.index.js","/assets/js/PageHeading.js","/assets/js/PostCard.js"]}}},matches:$R[10]=[$R[11]={i:"__root__ ",u:1793898303946,s:"success",ssr:!0},$R[12]={i:" blog  blog ",u:1793898303946,s:"success",ssr:!0}]})($R["tsr"]);$_TSR.e();{let s=document.currentScript,p;while((p=s.previousElementSibling)&&p.hasAttribute('data-tsr-stream-part'))p.remove();s.remove()}</script>
+  <script type="module" async src="assets/js/index.js"></script>
+  <script>document.currentScript.remove();/*$tsr-stream-boundary*/</script>
+</body>
+</html>
