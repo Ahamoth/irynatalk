@@ -1,7 +1,399 @@
-<!DOCTYPE html><html lang="uk"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><base href="/"/><link rel="preload" as="image" href="assets/img/course-boundaries.jpg"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"/><link rel="stylesheet" href="assets/styles.css"/><title>Внутрішня опора — курс Ірини Борисовської</title><meta name="description" content="Шеститижневий онлайн-курс про особисті межі, спокійне «ні» та вміння чути власні бажання. Без тиску й гучних обіцянок — лише практики, які працюють у звичайному дні."/><meta property="og:title" content="Внутрішня опора — як перестати жити чужими очікуваннями"/><meta property="og:description" content="Шеститижневий онлайн-курс про особисті межі, спокійне «ні» та вміння чути власні бажання. Без тиску й гучних обіцянок — лише практики, які працюють у звичайному дні."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+  <title>Тест: Внутрішня опора  Ірина Борисовська</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&amp;display=swap" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    /* Стили самого теста, изолированные внутри контейнера */
+    .test-wrapper {
+      --t-bg: #f2f5f4;
+      --t-surface: #fbfcfb;
+      --t-ink: #1e2c32;
+      --t-muted: #586a70;
+      --t-line: #d3dcda;
+      --t-soft: #e2ebe8;
+      --t-accent: #2a4550;
+      --t-accent-ink: #ffffff;
+      --t-care-bg: #f8ede7;
+      --t-care-line: #c4704b;
+      --t-care-ink: #4a2a1b;
+      --t-font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+      --t-font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+      
+      background: var(--t-bg);
+      color: var(--t-ink);
+      font-family: var(--t-font-body);
+      font-size: 16px;
+      line-height: 1.55;
+      padding: 40px 16px 56px;
+      border-radius: 20px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .test-wrapper * { box-sizing: border-box; }
+    .test-wrapper .wrap { max-width: 720px; margin-inline: auto; display: flex; flex-direction: column; gap: 28px; }
+    .test-wrapper h1, .test-wrapper h2 { font-family: var(--t-font-display); font-weight: 500; line-height: 1.1; margin: 0; text-wrap: balance; }
+    .test-wrapper h1 { font-size: clamp(2.2rem, 7vw, 3.1rem); }
+    .test-wrapper h1 em { font-style: italic; color: var(--t-muted); }
+    .test-wrapper p { margin: 0; }
+    .test-wrapper .lead { color: var(--t-muted); max-width: 60ch; }
+    .test-wrapper .eyebrow { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--t-muted); font-weight: 500; }
+    .test-wrapper .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .test-wrapper .tab {
+      font: inherit; font-weight: 500; cursor: pointer;
+      padding: 10px 18px; border-radius: 999px;
+      border: 1px solid var(--t-line); background: transparent; color: var(--t-ink);
+    }
+    .test-wrapper .tab[aria-selected="true"] { background: var(--t-accent); color: var(--t-accent-ink); border-color: var(--t-accent); }
+    .test-wrapper .tab:focus-visible, .test-wrapper .opt input:focus-visible + span, .test-wrapper .btn:focus-visible { outline: 2px solid var(--t-accent); outline-offset: 3px; }
+    .test-wrapper .panel { display: flex; flex-direction: column; gap: 20px; }
+    .test-wrapper .panel h2 { font-size: 1.9rem; }
+    .test-wrapper .how { color: var(--t-muted); }
+    .test-wrapper fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+    .test-wrapper .q { background: var(--t-surface); border: 1px solid var(--t-line); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+    .test-wrapper .q legend { padding: 0; float: left; width: 100%; font-weight: 500; }
+    .test-wrapper .q legend + * { clear: both; }
+    .test-wrapper .q .n { color: var(--t-muted); font-variant-numeric: tabular-nums; margin-right: 6px; }
+    .test-wrapper .opts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+    .test-wrapper .opt { position: relative; display: block; min-width: 0; }
+    .test-wrapper .opt input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+    .test-wrapper .opt span {
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      min-height: 48px; padding: 8px 10px; border-radius: 10px;
+      border: 1px solid var(--t-line); background: var(--t-bg); font-size: 0.9rem; line-height: 1.25;
+    }
+    .test-wrapper .opt input:checked + span { background: var(--t-accent); color: var(--t-accent-ink); border-color: var(--t-accent); font-weight: 500; }
+    @media (hover: hover) { .test-wrapper .opt input:not(:checked):hover + span { border-color: var(--t-accent); } }
+    @media (max-width: 520px) { .test-wrapper .opts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .test-wrapper .bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+    .test-wrapper .progress { color: var(--t-muted); font-variant-numeric: tabular-nums; }
+    .test-wrapper .btn {
+      font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block;
+      padding: 13px 24px; border-radius: 10px; border: 1px solid var(--t-accent);
+      background: var(--t-accent); color: var(--t-accent-ink);
+    }
+    .test-wrapper .btn[disabled] { opacity: 0.4; cursor: not-allowed; }
+    .test-wrapper .btn.ghost { background: transparent; color: var(--t-ink); border-color: var(--t-line); }
+    .test-wrapper .result { background: var(--t-surface); border: 1px solid var(--t-line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .test-wrapper .score { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+    .test-wrapper .score b { font-family: var(--t-font-display); font-weight: 500; font-size: 3.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+    .test-wrapper .score span { color: var(--t-muted); }
+    .test-wrapper .band { font-family: var(--t-font-display); font-size: 1.7rem; line-height: 1.15; }
+    .test-wrapper .meter { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 4px; }
+    .test-wrapper .meter i { height: 8px; border-radius: 4px; background: var(--t-soft); }
+    .test-wrapper .meter i.on { background: var(--t-accent); }
+    .test-wrapper .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .test-wrapper .care { background: var(--t-care-bg); border: 1px solid var(--t-care-line); color: var(--t-care-ink); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .test-wrapper .care strong { font-size: 1.05rem; }
+    .test-wrapper .phone { font-family: var(--t-font-display); font-size: 2rem; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
+    .test-wrapper .note { color: var(--t-muted); font-size: 0.875rem; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--t-line); padding-top: 20px; }
+    @media (prefers-reduced-motion: no-preference) { .test-wrapper .result { animation: rise 0.35s ease-out; } }
+    @keyframes rise { from { transform: translateY(6px); opacity: 0; } to { transform: none; opacity: 1; } }
+  </style>
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header class="relative z-30 border-b bg-background">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-6">
+      <a class="group flex items-center gap-3 text-foreground" href="index.html">
+        <span class="flex size-12 items-center justify-center rounded-full border border-foreground/70 font-display text-2xl italic">ІБ</span>
+        <span class="flex flex-col leading-none">
+          <span class="whitespace-nowrap font-display text-xl uppercase tracking-[0.08em] md:text-2xl">Ірина Борисовська</span>
+          <span class="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Простір психології</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-[15px] lg:flex">
+        <a class="nav-link whitespace-nowrap" href="index.html">Головна</a>
+        <a class="nav-link whitespace-nowrap" href="about.html">Про мене</a>
+        <a class="nav-link whitespace-nowrap text-primary font-semibold" href="courses.html" data-status="active" aria-current="page">Тести</a>
+        <a class="nav-link whitespace-nowrap" href="blog.html">Блог</a>
+        <a class="nav-link whitespace-nowrap" href="contacts.html">Контакти</a>
+      </nav>
+      <div class="hidden items-center gap-3 xl:flex">
+        <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed border border-primary/40 bg-transparent text-primary uppercase tracking-[0.1em] text-[11px] font-semibold hover:bg-card rounded-md px-8 h-11 leading-tight" href="contacts.html">Записатись на консультацію</a>
+      </div>
+      <button type="button" aria-label="Меню" class="flex size-11 items-center justify-center rounded-full border border-primary/30 lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5" aria-hidden="true"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>
+      </button>
+    </div>
+  </header>
 
-<meta name="twitter:title" content="Внутрішня опора — як перестати жити чужими очікуваннями"><meta name="twitter:description" content="Шеститижневий онлайн-курс про особисті межі, спокійне «ні» та вміння чути власні бажання. Без тиску й гучних обіцянок — лише практики, які працюють у звичайному дні."><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_3m0cnpbf208s7bzf4h71asb6eb/e77d67238d1e314cc47517fa4bf1c60f_1793897502858.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_3m0cnpbf208s7bzf4h71asb6eb/e77d67238d1e314cc47517fa4bf1c60f_1793897502858.png"></head><body><header class="relative z-30 border-b bg-background"><div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-6"><a class="group flex items-center gap-3 text-foreground" href="index.html"><span class="flex size-12 items-center justify-center rounded-full border border-foreground/70 font-display text-2xl italic">ІБ</span><span class="flex flex-col leading-none"><span class="whitespace-nowrap font-display text-xl uppercase tracking-[0.08em] md:text-2xl">Ірина Борисовська</span><span class="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Простір психології</span></span></a><nav class="hidden items-center gap-7 text-[15px] lg:flex"><a class="nav-link whitespace-nowrap" href="index.html">Головна</a><a class="nav-link whitespace-nowrap" href="about.html">Про мене</a><a class="nav-link whitespace-nowrap text-primary font-semibold" href="courses.html" data-status="active" aria-current="page">Тести</a><a class="nav-link whitespace-nowrap" href="blog.html">Блог</a><a class="nav-link whitespace-nowrap" href="contacts.html">Контакти</a></nav><div class="hidden items-center gap-3 xl:flex"><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-primary/40 bg-transparent text-primary uppercase tracking-[0.1em] text-[11px] font-semibold hover:bg-card rounded-md px-8 h-11 leading-tight" href="contacts.html">Записатись на консультацію</a><span class="ml-2 hidden size-10 2xl:flex items-center justify-center rounded-full border border-primary/30"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag size-4" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg></span><span class="hidden size-10 items-center justify-center rounded-full border border-primary/30 2xl:flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search size-4" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span><span class="hidden size-10 items-center justify-center rounded-full border border-primary/30 text-sm 2xl:flex">UA</span></div><button type="button" aria-label="Меню" class="flex size-11 items-center justify-center rounded-full border border-primary/30 lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></header><main><!--$--><div class="mx-auto max-w-7xl px-6 pt-16"><a class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary active" href="courses.html" data-status="active" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left size-4" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> Усі курси</a><div class="mt-8 grid gap-14 lg:grid-cols-[1.1fr_1fr]"><div><span class="inline-block border border-primary/60 px-4 py-1.5 text-primary">Самоцінність</span><h1 class="mt-6 text-5xl leading-[1.02] md:text-7xl">Внутрішня опора<span class="block italic text-ink">як перестати жити чужими очікуваннями</span></h1><p class="mt-8 text-lg leading-relaxed text-muted-foreground">Шеститижневий онлайн-курс про особисті межі, спокійне «ні» та вміння чути власні бажання. Без тиску й гучних обіцянок — лише практики, які працюють у звичайному дні.</p><ul class="mt-8 space-y-3"><li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-play size-5 text-primary" aria-hidden="true"><path d="M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z"></path><path d="M12 17v4"></path><path d="M8 21h8"></path><rect x="2" y="3" width="20" height="14" rx="2"></rect></svg>Онлайн · записи + 3 живі зустрічі</li><li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock size-5 text-primary" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>6 тижнів</li><li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days size-5 text-primary" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg>Старт нового потоку щомісяця</li></ul><div class="mt-10 flex flex-wrap items-center gap-6"><span class="font-display text-4xl text-primary">3 900 грн</span><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 rounded-none bg-primary text-primary-foreground uppercase tracking-[0.14em] text-xs font-semibold hover:bg-primary/90 h-14 px-8">Придбати курс</button></div></div><div class="bg-frame p-6 shadow-lift"><div class="dashed-frame"><img src="assets/img/course-boundaries.jpg" alt="Внутрішня опора" width="1024" height="768" class="aspect-[4/4.4] w-full object-cover"/></div></div></div><section class="mt-24"><h2 class="text-5xl">Програма</h2><ol class="mt-10 grid gap-6 md:grid-cols-2"><li class="flex gap-5 border-b pb-6"><span class="font-display text-4xl text-mist">01</span><span class="pt-2 text-lg">Звідки береться страх розчарувати інших</span></li><li class="flex gap-5 border-b pb-6"><span class="font-display text-4xl text-mist">02</span><span class="pt-2 text-lg">Карта особистих меж: тіло, час, емоції, гроші</span></li><li class="flex gap-5 border-b pb-6"><span class="font-display text-4xl text-mist">03</span><span class="pt-2 text-lg">Як говорити «ні» без провини</span></li><li class="flex gap-5 border-b pb-6"><span class="font-display text-4xl text-mist">04</span><span class="pt-2 text-lg">Сором і самокритика: м’які способи відпустити</span></li><li class="flex gap-5 border-b pb-6"><span class="font-display text-4xl text-mist">05</span><span class="pt-2 text-lg">Ресурс і відновлення як щоденна гігієна</span></li><li class="flex gap-5 border-b pb-6"><span class="font-display text-4xl text-mist">06</span><span class="pt-2 text-lg">Нова версія себе: план на три місяці</span></li></ol></section></div><!--/$--></main><footer class="mt-24 border-t bg-secondary/60"><div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr]"><div><a class="group flex items-center gap-3 text-foreground" href="index.html"><span class="flex size-12 items-center justify-center rounded-full border border-foreground/70 font-display text-2xl italic">ІБ</span><span class="flex flex-col leading-none"><span class="whitespace-nowrap font-display text-xl uppercase tracking-[0.08em] md:text-2xl">Ірина Борисовська</span><span class="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Простір психології</span></span></a><p class="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">Онлайн-простір психологічної підтримки: групи та індивідуальні консультації для тих, хто хоче жити спокійніше й усвідомленіше.</p></div><div><h4 class="text-xl">Навігація</h4><ul class="mt-4 space-y-2 text-sm text-muted-foreground"><li><a class="hover:text-primary" href="about.html">Про мене</a></li><li><a class="hover:text-primary active" href="courses.html" data-status="active" aria-current="page">Тести</a></li><li><a class="hover:text-primary" href="blog.html">Блог</a></li><li><a class="hover:text-primary" href="contacts.html">Контакти</a></li></ul></div><div><h4 class="text-xl">Зв’язок</h4><ul class="mt-4 space-y-3 text-sm text-muted-foreground"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>irynaborisovskaya@gmail.com</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone size-4" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>+38 067 565 36 23</li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin size-4" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Дніпро · онлайн</li></ul></div></div><div class="border-t py-6 text-center text-xs text-muted-foreground">© <!-- -->2026<!-- --> <!-- -->Ірина Борисовська<!-- -->. Усі права захищені.</div></footer><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section>
+  <main class="mx-auto max-w-7xl px-6 pt-10">
+    <div class="test-wrapper">
+      <div class="wrap">
+        <header style="display:flex;flex-direction:column;gap:14px">
+          <span class="eyebrow">Самооцінка</span>
+          <h1>Як ви почуваєтеся <em>останнім часом?</em></h1>
+          <p class="lead">Два короткі опитувальники, якими користуються лікарі й психологи. Вони допоможуть побачити, наскільки виражені ознаки депресії чи тривоги, і вирішити, чи варто звернутися по підтримку. Це не діагноз.</p>
+        </header>
 
+        <div class="tabs" role="tablist" aria-label="Оберіть опитувальник">
+          <button class="tab" role="tab" id="tab-phq9" aria-controls="panel-phq9" aria-selected="true" type="button">Настрій (PHQ-9)</button>
+          <button class="tab" role="tab" id="tab-gad7" aria-controls="panel-gad7" aria-selected="false" type="button">Тривога (GAD-7)</button>
+        </div>
 
-<script src="assets/js/mobile-menu.js"></script>
-</body></html>
+        <div id="panels"></div>
+
+        <footer class="note">
+          <p>Опитувальник не замінює консультацію й не ставить діагноз. Діагноз може встановити лише фахівець після розмови з вами.</p>
+          <p>Ваші відповіді не зберігаються і нікуди не надсилаються: підрахунок відбувається у вашому браузері.</p>
+          <p>Якщо вам дуже важко, ви можете зателефонувати на цілодобову лінію Lifeline Ukraine: <strong>7333</strong>. У разі безпосередньої небезпеки телефонуйте <strong>112</strong>.</p>
+        </footer>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="mt-24 border-t bg-secondary/60">
+    <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <a class="group flex items-center gap-3 text-foreground" href="index.html">
+          <span class="flex size-12 items-center justify-center rounded-full border border-foreground/70 font-display text-2xl italic">ІБ</span>
+          <span class="flex flex-col leading-none">
+            <span class="whitespace-nowrap font-display text-xl uppercase tracking-[0.08em] md:text-2xl">Ірина Борисовська</span>
+            <span class="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Простір психології</span>
+          </span>
+        </a>
+        <p class="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">Онлайн-простір психологічної підтримки: групи та індивідуальні консультації для тих, хто хоче жити спокійніше й усвідомленіше.</p>
+      </div>
+      <div>
+        <h4 class="text-xl">Навігація</h4>
+        <ul class="mt-4 space-y-2 text-sm text-muted-foreground">
+          <li><a class="hover:text-primary" href="about.html">Про мене</a></li>
+          <li><a class="hover:text-primary active" href="courses.html" data-status="active" aria-current="page">Тести</a></li>
+          <li><a class="hover:text-primary" href="blog.html">Блог</a></li>
+          <li><a class="hover:text-primary" href="contacts.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl">Звязок</h4>
+        <ul class="mt-4 space-y-3 text-sm text-muted-foreground">
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>irynaborisovskaya@gmail.com</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone size-4" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></svg>+38 067 565 36 23</li>
+          <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin size-4" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>Дніпро  онлайн</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t py-6 text-center text-xs text-muted-foreground"> 2026 Ірина Борисовська. Усі права захищені.</div>
+  </footer>
+
+  <script>
+    var CHOICES = ["Зовсім ні", "Кілька днів", "Більше половини днів", "Майже щодня"];
+
+    var TESTS = {
+      phq9: {
+        title: "Настрій і самопочуття",
+        how: "Як часто за останні 2 тижні вас турбувало будь-що з наведеного нижче?",
+        items: [
+          "Малий інтерес або задоволення від того, що ви робите",
+          "Пригнічений настрій, сум або відчуття безнадії",
+          "Проблеми зі сном: важко заснути, неспокійний сон або, навпаки, надмірна сонливість",
+          "Відчуття втоми або браку енергії",
+          "Поганий апетит або переїдання",
+          "Погана думка про себе, відчуття, що ви невдаха або підвели себе чи родину",
+          "Труднощі з концентрацією, наприклад, під час читання або перегляду фільму",
+          "Такі повільні рухи чи мовлення, що це помічають інші. Або навпаки, такий неспокій, що ви рухаєтеся значно більше, ніж зазвичай",
+          "Думки про те, що краще було б померти, або про те, щоб завдати собі шкоди"
+        ],
+        max: 27,
+        bands: [
+          { to: 4,  name: "Мінімальні ознаки", text: "Ваші відповіді вказують на мінімальні ознаки пригніченого настрою. Якщо вас усе одно турбує самопочуття, це вагома причина поговорити зі спеціалістом." },
+          { to: 9,  name: "Легкі ознаки", text: "Є легкі ознаки пригніченого настрою. Зверніть увагу на сон, відпочинок і підтримку близьких. Якщо стан тримається кілька тижнів, варто обговорити його з психологом." },
+          { to: 14, name: "Помірні ознаки", text: "Ознаки помірні. Рекомендовано поговорити зі спеціалістом: чим раніше ви отримаєте підтримку, тим легше зміни закріплюються." },
+          { to: 19, name: "Помірно виражені ознаки", text: "Ознаки помітні й, імовірно, впливають на повсякденне життя. Варто звернутися до психолога або лікаря найближчим часом." },
+          { to: 27, name: "Виражені ознаки", text: "Ознаки виражені. Будь ласка, зверніться по професійну допомогу найближчим часом до психолога або лікаря. Ви не мусите справлятися з цим на самоті." }
+        ],
+        flagItem: 8
+      },
+      gad7: {
+        title: "Тривога і напруження",
+        how: "Як часто за останні 2 тижні вас турбувало будь-що з наведеного нижче?",
+        items: [
+          "Відчуття нервозності, тривоги або напруження",
+          "Неможливість зупинити чи контролювати тривогу",
+          "Надмірні переживання з різних приводів",
+          "Труднощі з розслабленням",
+          "Така неспокійність, що важко всидіти на місці",
+          "Легка дратівливість або роздратування",
+          "Відчуття страху, ніби може трапитися щось жахливе"
+        ],
+        max: 21,
+        bands: [
+          { to: 4,  name: "Мінімальна тривога", text: "Ваші відповіді вказують на мінімальний рівень тривоги. Якщо вас усе одно турбує напруження, про це варто поговорити." },
+          { to: 9,  name: "Легка тривога", text: "Тривога легка. Допомагають регулярний сон, рух, пауза від новин і розмови з близькими. Якщо вона не відступає, зверніться до психолога." },
+          { to: 14, name: "Помірна тривога", text: "Тривога помірна. Рекомендовано обговорити її зі спеціалістом, бо вона часто заважає відпочивати й ухвалювати рішення." },
+          { to: 21, name: "Виражена тривога", text: "Тривога виражена. Будь ласка, зверніться по професійну допомогу найближчим часом до психолога або лікаря." }
+        ]
+      }
+    };
+
+    var answers = { phq9: [], gad7: [] };
+    var panels = document.getElementById("panels");
+
+    function el(tag, cls, html) {
+      var e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (html != null) e.innerHTML = html;
+      return e;
+    }
+
+    function buildPanel(id) {
+      var t = TESTS[id];
+      var panel = el("section", "panel");
+      panel.id = "panel-" + id;
+      panel.setAttribute("role", "tabpanel");
+      panel.setAttribute("aria-labelledby", "tab-" + id);
+      panel.hidden = id !== "phq9";
+
+      panel.appendChild(el("h2", null, t.title));
+      panel.appendChild(el("p", "how", t.how));
+
+      var form = el("form");
+      form.id = "form-" + id;
+      form.noValidate = true;
+      form.style.cssText = "display:flex;flex-direction:column;gap:12px";
+
+      t.items.forEach(function (text, i) {
+        var fs = el("fieldset", "q");
+        var lg = el("legend", null, '<span class="n">' + (i + 1) + '.</span>' + text);
+        fs.appendChild(lg);
+        var opts = el("div", "opts");
+        CHOICES.forEach(function (label, v) {
+          var lab = el("label", "opt");
+          var inp = document.createElement("input");
+          inp.type = "radio";
+          inp.name = id + "-q" + i;
+          inp.id = id + "-q" + i + "-" + v;
+          inp.value = v;
+          inp.addEventListener("change", function () { answers[id][i] = v; update(id); });
+          lab.appendChild(inp);
+          lab.appendChild(el("span", null, label));
+          opts.appendChild(lab);
+        });
+        fs.appendChild(opts);
+        form.appendChild(fs);
+      });
+
+      var bar = el("div", "bar");
+      var prog = el("span", "progress");
+      prog.id = "progress-" + id;
+      var submit = el("button", "btn", "Показати результат");
+      submit.type = "submit";
+      submit.id = "submit-" + id;
+      submit.disabled = true;
+      bar.appendChild(prog);
+      bar.appendChild(submit);
+      form.appendChild(bar);
+      panel.appendChild(form);
+
+      var out = el("div");
+      out.id = "out-" + id;
+      out.setAttribute("aria-live", "polite");
+      panel.appendChild(out);
+
+      form.addEventListener("submit", function (ev) { ev.preventDefault(); showResult(id); });
+      panels.appendChild(panel);
+      update(id);
+    }
+
+    function answered(id) {
+      var n = 0;
+      for (var i = 0; i < TESTS[id].items.length; i++) if (answers[id][i] !== undefined) n++;
+      return n;
+    }
+
+    function update(id) {
+      var total = TESTS[id].items.length;
+      var n = answered(id);
+      document.getElementById("progress-" + id).textContent = "Відповідей: " + n + " з " + total;
+      document.getElementById("submit-" + id).disabled = n < total;
+    }
+
+    function showResult(id) {
+      var t = TESTS[id];
+      var total = TESTS[id].items.length;
+      if (answered(id) < total) return;
+      var score = answers[id].reduce(function (a, b) { return a + b; }, 0);
+      var bandIdx = 0;
+      for (var k = 0; k < t.bands.length; k++) { if (score <= t.bands[k].to) { bandIdx = k; break; } }
+      var band = t.bands[bandIdx];
+
+      var out = document.getElementById("out-" + id);
+      out.innerHTML = "";
+      var wrap = el("div");
+      wrap.style.cssText = "display:flex;flex-direction:column;gap:16px";
+
+      if (t.flagItem !== undefined && answers[id][t.flagItem] > 0) {
+        var care = el("div", "care");
+        care.id = "care-" + id;
+        care.appendChild(el("strong", null, "Ви згадали думки про смерть або про шкоду собі. Дякуємо, що були чесними."));
+        care.appendChild(el("p", null, "Такі думки не варто носити самотужки. Зателефонуйте на безкоштовну цілодобову лінію підтримки Lifeline Ukraine:"));
+        care.appendChild(el("div", "phone", "7333"));
+        care.appendChild(el("p", null, "Якщо ви в небезпеці просто зараз, телефонуйте 112 або зверніться до людини поруч."));
+        wrap.appendChild(care);
+      }
+
+      var res = el("div", "result");
+      res.id = "result-" + id;
+      var sc = el("div", "score", "<b>" + score + "</b><span>із " + t.max + " балів</span>");
+      res.appendChild(sc);
+      var meter = el("div", "meter");
+      meter.style.setProperty("--n", t.bands.length);
+      t.bands.forEach(function (b, i) { meter.appendChild(el("i", i <= bandIdx ? "on" : "")); });
+      res.appendChild(meter);
+      res.appendChild(el("div", "band", band.name));
+      res.appendChild(el("p", null, band.text));
+      res.appendChild(el("p", "lead", "Це результат самооцінки, а не діагноз. Його точніше оцінить спеціаліст під час розмови."));
+
+      var actions = el("div", "actions");
+      var cta = el("a", "btn", "Записатися на консультацію");
+      cta.id = "cta-link";
+      cta.href = "contacts.html"; /* ведем на страницу контактов */
+      var again = el("button", "btn ghost", "Пройти ще раз");
+      again.type = "button";
+      again.addEventListener("click", function () { reset(id); });
+      actions.appendChild(cta);
+      actions.appendChild(again);
+      res.appendChild(actions);
+      wrap.appendChild(res);
+
+      out.appendChild(wrap);
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      wrap.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    }
+
+    function reset(id) {
+      answers[id] = [];
+      var form = document.getElementById("form-" + id);
+      var inputs = form.querySelectorAll("input[type=radio]");
+      for (var i = 0; i < inputs.length; i++) inputs[i].checked = false;
+      document.getElementById("out-" + id).innerHTML = "";
+      update(id);
+      form.scrollIntoView({ behavior: "auto", block: "start" });
+    }
+
+    buildPanel("phq9");
+    buildPanel("gad7");
+
+    var tabs = [document.getElementById("tab-phq9"), document.getElementById("tab-gad7")];
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute("aria-selected", on ? "true" : "false");
+          document.getElementById("panel-" + t.id.replace("tab-", "")).hidden = !on;
+        });
+      });
+    });
+  </script>
+  <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>
