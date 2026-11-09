@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <!-- Градиент для синей части (верх) -->
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0057B7" />
+      <stop offset="100%" stop-color="#0057B7" />
+    </linearGradient>
+    <!-- Градиент для желтой части (низ) -->
+    <linearGradient id="yellow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </linearGradient>
+  </defs>
+  
+  <g transform="translate(0, 2)">
+    <!-- Контур сердца -->
+    <path d="M16 28.5C16 28.5 2 19 2 9.5C2 4.8 5.8 1 10.5 1C13 1 15 2.2 16 4C17 2.2 19 1 21.5 1C26.2 1 30 4.8 30 9.5C30 19 16 28.5 16 28.5Z" fill="url(#yellow-grad)" />
+    
+    <!-- Верхняя половина (синяя) -->
+    <path d="M16 28.5C16 28.5 2 19 2 9.5C2 4.8 5.8 1 10.5 1C13 1 15 2.2 16 4C17 2.2 19 1 21.5 1C26.2 1 30 4.8 30 9.5C30 19 16 28.5 16 28.5Z" fill="url(#blue-grad)" clip-path="url(#half-clip)" />
+    
+    <!-- Маска для обрезки синей части ровно пополам -->
+    <clipPath id="half-clip">
+      <rect x="0" y="0" width="32" height="14.5" />
+    </clipPath>
+  </g>
+</svg>
